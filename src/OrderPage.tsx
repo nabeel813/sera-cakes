@@ -196,18 +196,7 @@ function CartIcon() {
   );
 }
 
-function PlayIcon() {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      className="ml-0.5 h-4 w-4"
-      aria-hidden="true"
-    >
-      <path d="M8 5.5v13l11-6.5-11-6.5z" />
-    </svg>
-  );
-}
+
 
 function PhoneIcon() {
   return (
