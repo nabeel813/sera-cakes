@@ -102,7 +102,7 @@ const NAV = [
 const btnPrimary =
   "inline-flex items-center justify-center rounded-full bg-[#C41E3A] px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-red-900/30 transition-colors hover:bg-[#a8172f] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-300";
 const btnGhost =
-  "inline-flex items-center justify-center rounded-full border border-white/20 px-7 py-3.5 text-sm font-semibold text-[#f3e2de] transition-colors hover:border-red-300/60 hover:text-red-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-300";
+  "inline-flex items-center justify-center rounded-full border border-[#c41e3a]/50 px-7 py-3.5 text-sm font-semibold text-[#2b0a10] transition-colors hover:border-red-300/60 hover:text-[#C41E3A] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-300";
 
 function ExtLink({ href, className, children }: { href: string; className: string; children: React.ReactNode }) {
   return (
@@ -115,8 +115,8 @@ function ExtLink({ href, className, children }: { href: string; className: strin
 function SectionHead({ title, text }: { title: string; text?: string }) {
   return (
     <div className="mx-auto max-w-2xl text-center">
-      <h2 className="font-display text-3xl font-semibold text-red-100 sm:text-4xl">{title}</h2>
-      {text && <p className="mt-4 leading-7 text-[#cdb5af]">{text}</p>}
+      <h2 className="font-display text-3xl font-semibold text-[#3a0a12] sm:text-4xl">{title}</h2>
+      {text && <p className="mt-4 leading-7 text-[#4a3034]">{text}</p>}
     </div>
   );
 }
@@ -125,16 +125,16 @@ function SectionHead({ title, text }: { title: string; text?: string }) {
 
 export default function HomePage() {
   return (
-    <div className="font-ui min-h-screen bg-[#170408] text-[#f8ece9]">
+    <div className="font-ui min-h-screen bg-[#F2ECDF] text-[#2b0a10]">
       {/* Header */}
-      <header className="sticky top-0 z-30 border-b border-white/5 bg-[#170408]/85 backdrop-blur-md">
+      <header className="sticky top-0 z-30 border-b border-black/10 bg-[#F2ECDF]/90 backdrop-blur-md">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-3">
-          <a href="#top" className="font-brand text-3xl leading-none text-[#ffe3e6]">
+          <a href="#top" className="font-brand text-3xl leading-none text-[#C41E3A]">
             Sera Cakes
           </a>
-          <nav aria-label="Main" className="hidden items-center gap-7 text-sm text-[#d9c3bd] lg:flex">
+          <nav aria-label="Main" className="hidden items-center gap-7 text-sm text-[#4a3034] lg:flex">
             {NAV.map(([label, href]) => (
-              <a key={href} href={href} className="transition-colors hover:text-red-200">
+              <a key={href} href={href} className="transition-colors hover:text-[#C41E3A]">
                 {label}
               </a>
             ))}
@@ -147,18 +147,18 @@ export default function HomePage() {
 
       <main id="top">
         {/* 1. Hero */}
-        <section className="relative overflow-hidden border-b border-white/5">
+        <section className="relative overflow-hidden border-b border-black/10">
           <div
             className="pointer-events-none absolute inset-0 opacity-[0.06]"
-            style={{ backgroundImage: "radial-gradient(circle at 1px 1px, #fff 1px, transparent 0)", backgroundSize: "26px 26px" }}
+            style={{ backgroundImage: "radial-gradient(circle at 1px 1px, #000 1px, transparent 0)", backgroundSize: "26px 26px" }}
           />
           <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-16 lg:grid-cols-[1.1fr_1fr] lg:py-24">
             <div className="relative z-10">
-              <p className="font-brand text-4xl leading-none text-red-300">Sera Cakes by Reeba</p>
-              <h1 className="font-display mt-5 text-4xl font-semibold leading-[1.08] text-[#f9ece9] sm:text-6xl">
+              <p className="font-brand text-4xl leading-none text-[#C41E3A]">Sera Cakes by Reeba</p>
+              <h1 className="font-display mt-5 text-4xl font-semibold leading-[1.08] text-[#2b0a10] sm:text-6xl">
                 Cakes made for moments worth celebrating
               </h1>
-              <p className="mt-6 max-w-lg text-base leading-7 text-[#d3bcb6]">
+              <p className="mt-6 max-w-lg text-base leading-7 text-[#4a3034]">
                 From classic cakes to handcrafted custom creations, Sera Cakes by Reeba makes fresh and beautiful cakes for
                 birthdays, anniversaries, weddings and every special occasion.
               </p>
@@ -166,7 +166,7 @@ export default function HomePage() {
                 <ExtLink href={MENU_URL} className={btnPrimary}>Explore our cakes</ExtLink>
                 <ExtLink href={WHATSAPP_URL} className={btnGhost}>Order on WhatsApp</ExtLink>
               </div>
-              <p className="mt-6 text-sm text-[#b39d97]">Freshly baked. Custom cakes. Made for every celebration.</p>
+              <p className="mt-6 text-sm text-[#6b5256]">Freshly baked. Custom cakes. Made for every celebration.</p>
             </div>
 
             <div className="relative z-10 grid grid-cols-2 gap-4">
@@ -178,29 +178,29 @@ export default function HomePage() {
 
         {/* 2. About */}
         <section id="about" className="mx-auto max-w-3xl scroll-mt-20 px-6 py-20 text-center">
-          <h2 className="font-display text-3xl font-semibold text-red-100 sm:text-4xl">More than just a cake</h2>
-          <p className="mt-6 leading-8 text-[#d3bcb6]">
+          <h2 className="font-display text-3xl font-semibold text-[#3a0a12] sm:text-4xl">More than just a cake</h2>
+          <p className="mt-6 leading-8 text-[#4a3034]">
             At Sera Cakes by Reeba, we believe a cake is more than a dessert — it's part of the memory.
           </p>
-          <p className="mt-4 leading-8 text-[#d3bcb6]">
+          <p className="mt-4 leading-8 text-[#4a3034]">
             From simple classic flavours to elaborate celebration cakes, we create cakes with attention to flavour,
             presentation and detail. Whether you're celebrating a birthday, anniversary, wedding or simply craving
             something sweet, we're here to make your occasion a little more special.
           </p>
-          <p className="mt-4 leading-8 text-[#d3bcb6]">
+          <p className="mt-4 leading-8 text-[#4a3034]">
             Looking for a cake shop in {LOCATION}? Explore our cakes and order directly through our online menu.
           </p>
           <ExtLink href={MENU_URL} className={`${btnGhost} mt-8`}>Discover our cakes</ExtLink>
         </section>
 
         {/* 3. Menu preview */}
-        <section id="cakes" className="scroll-mt-20 border-y border-white/5 bg-[#1b060b] px-6 py-20">
+        <section id="cakes" className="scroll-mt-20 border-y border-black/10 bg-[#EEDBAA] px-6 py-20">
           <SectionHead title="Something for every sweet craving" text="Explore some of our popular cake selections, from everyday classics to indulgent signature bakes." />
           <div className="mx-auto mt-12 grid max-w-7xl gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {CATEGORIES.map((c) => (
-              <div key={c.name} className="rounded-2xl border border-white/10 bg-[#1e0910] p-6">
-                <h3 className="font-display text-lg text-red-200">{c.name}</h3>
-                <ul className="mt-3 space-y-1.5 text-sm text-[#d3bcb6]">
+              <div key={c.name} className="rounded-2xl border border-black/10 bg-white/60 p-6">
+                <h3 className="font-display text-lg text-[#C41E3A]">{c.name}</h3>
+                <ul className="mt-3 space-y-1.5 text-sm text-[#4a3034]">
                   {c.cakes.map((cake) => (
                     <li key={cake}>{cake}</li>
                   ))}
@@ -208,9 +208,9 @@ export default function HomePage() {
               </div>
             ))}
             <div className="flex flex-col items-start justify-center gap-4 rounded-2xl border border-red-400/30 bg-red-400/10 p-6">
-              <p className="font-display text-lg text-red-100">See every cake with prices and photos.</p>
+              <p className="font-display text-lg text-[#3a0a12]">See every cake with prices and photos.</p>
               <Link to="/order" className={btnPrimary}>View full menu &amp; prices</Link>
-              <ExtLink href={MENU_URL} className="text-sm text-red-200 underline underline-offset-4">Open the digital menu</ExtLink>
+              <ExtLink href={MENU_URL} className="text-sm text-[#C41E3A] underline underline-offset-4">Open the digital menu</ExtLink>
             </div>
           </div>
         </section>
@@ -220,28 +220,29 @@ export default function HomePage() {
           <SectionHead title="Customer favourites" text="A few cakes that make celebrations a little sweeter." />
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {BESTSELLERS.map((b) => (
-              <article key={b.name} className="group flex flex-col overflow-hidden rounded-2xl border border-white/5 bg-[#1e0910]">
+              <article key={b.name} className="group flex flex-col overflow-hidden rounded-2xl border border-black/10 bg-white/60">
                 <div className="h-56 overflow-hidden">
                   <img src={b.image} alt={`${b.name} cake`} loading="lazy" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
                 </div>
                 <div className="flex flex-1 flex-col gap-3 p-5">
                   <h3 className="font-display text-lg">{b.name}</h3>
-                  <p className="text-sm leading-6 text-[#cdb5af]">{b.text}</p>
-                  <ExtLink href={MENU_URL} className="mt-auto pt-2 text-sm font-semibold text-red-300 hover:text-red-200">
+                  <p className="text-sm leading-6 text-[#4a3034]">{b.text}</p>
+                  <ExtLink href={MENU_URL} className="mt-auto pt-2 text-sm font-semibold text-[#C41E3A] hover:text-[#C41E3A]">
                     View &amp; order
                   </ExtLink>
                 </div>
               </article>
             ))}
+
           </div>
         </section>
 
         {/* 5. Custom cakes */}
         <section id="custom" className="scroll-mt-20 px-6 pb-20">
-          <div className="mx-auto max-w-5xl rounded-[32px] border border-red-400/25 bg-gradient-to-br from-[#3a0a15] to-[#1e0910] px-8 py-16 text-center sm:px-16">
-            <h2 className="font-display text-3xl font-semibold text-red-100 sm:text-5xl">Your idea. Our cake.</h2>
-            <p className="mt-5 text-lg text-[#e8d2cc]">Have something special in mind?</p>
-            <p className="mx-auto mt-4 max-w-2xl leading-7 text-[#d3bcb6]">
+          <div className="mx-auto max-w-5xl rounded-[32px] border border-red-400/25 bg-[#EEDBAA] px-8 py-16 text-center sm:px-16">
+            <h2 className="font-display text-3xl font-semibold text-[#3a0a12] sm:text-5xl">Your idea. Our cake.</h2>
+            <p className="mt-5 text-lg text-[#4a3034]">Have something special in mind?</p>
+            <p className="mx-auto mt-4 max-w-2xl leading-7 text-[#4a3034]">
               Whether you have a theme, colour combination, character, reference image or completely new idea, talk to us
               about creating a custom cake for your celebration. From birthday cakes to personalised celebration cakes,
               we'll help bring your idea to life.
@@ -251,14 +252,14 @@ export default function HomePage() {
         </section>
 
         {/* 6. Occasions */}
-        <section className="border-y border-white/5 bg-[#1b060b] px-6 py-20">
+        <section className="border-y border-black/10 bg-[#EEDBAA] px-6 py-20">
           <SectionHead title="Cakes for every celebration" text="Whatever you're celebrating, there's always room for cake." />
           <div className="mx-auto mt-12 grid max-w-6xl gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {OCCASIONS.map((o) => (
-              <div key={o.title} className="rounded-2xl border border-white/10 bg-[#1e0910] p-6">
+              <div key={o.title} className="rounded-2xl border border-black/10 bg-white/60 p-6">
                 <span className="text-3xl" aria-hidden="true">{o.icon}</span>
-                <h3 className="font-display mt-3 text-lg text-red-200">{o.title}</h3>
-                <p className="mt-2 text-sm leading-6 text-[#cdb5af]">{o.text}</p>
+                <h3 className="font-display mt-3 text-lg text-[#C41E3A]">{o.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-[#4a3034]">{o.text}</p>
               </div>
             ))}
           </div>
@@ -273,22 +274,22 @@ export default function HomePage() {
           <div className="mt-12 grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
             {WHY.map((w) => (
               <div key={w.title} className="border-l-2 border-red-400/50 pl-5">
-                <h3 className="font-display text-lg text-red-200">{w.title}</h3>
-                <p className="mt-2 text-sm leading-6 text-[#cdb5af]">{w.text}</p>
+                <h3 className="font-display text-lg text-[#C41E3A]">{w.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-[#4a3034]">{w.text}</p>
               </div>
             ))}
           </div>
         </section>
 
         {/* 8. Ordering process */}
-        <section className="border-y border-white/5 bg-[#1b060b] px-6 py-20">
+        <section className="border-y border-black/10 bg-[#EEDBAA] px-6 py-20">
           <SectionHead title="Your cake is just a few clicks away" />
           <ol className="mx-auto mt-12 grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {STEPS.map((s, i) => (
-              <li key={s.title} className="rounded-2xl border border-white/10 bg-[#1e0910] p-6">
-                <span className="font-display text-4xl text-red-400/70">{i + 1}</span>
+              <li key={s.title} className="rounded-2xl border border-black/10 bg-white/60 p-6">
+                <span className="font-display text-4xl text-[#C41E3A]">{i + 1}</span>
                 <h3 className="font-display mt-2 text-lg">{s.title}</h3>
-                <p className="mt-2 text-sm leading-6 text-[#cdb5af]">{s.text}</p>
+                <p className="mt-2 text-sm leading-6 text-[#4a3034]">{s.text}</p>
               </li>
             ))}
           </ol>
@@ -311,14 +312,14 @@ export default function HomePage() {
         </section>
 
         {/* 10. Reviews */}
-        <section className="border-y border-white/5 bg-[#1b060b] px-6 py-20">
+        <section className="border-y border-black/10 bg-[#EEDBAA] px-6 py-20">
           <SectionHead title="What our customers say" />
           <div className="mx-auto mt-12 grid max-w-6xl gap-6 md:grid-cols-3">
             {REVIEWS.map((r) => (
-              <figure key={r} className="rounded-2xl border border-white/10 bg-[#1e0910] p-6">
-                <div className="text-amber-300" aria-label="5 out of 5 stars">★★★★★</div>
-                <blockquote className="mt-3 leading-7 text-[#e8d2cc]">“{r}”</blockquote>
-                <figcaption className="mt-4 text-sm text-[#b39d97]">Customer</figcaption>
+              <figure key={r} className="rounded-2xl border border-black/10 bg-white/60 p-6">
+                <div className="text-amber-600" aria-label="5 out of 5 stars">★★★★★</div>
+                <blockquote className="mt-3 leading-7 text-[#4a3034]">“{r}”</blockquote>
+                <figcaption className="mt-4 text-sm text-[#6b5256]">Customer</figcaption>
               </figure>
             ))}
           </div>
@@ -329,19 +330,19 @@ export default function HomePage() {
           <SectionHead title="Visit Sera Cakes by Reeba" text="Looking for a cake shop near you for your next celebration? Visit us for fresh cakes, custom cake orders and delicious treats for every occasion." />
           <div className="mt-12 grid gap-8 text-sm sm:grid-cols-3">
             <div>
-              <h3 className="font-display text-lg text-red-200">Find us</h3>
-              <p className="mt-2 leading-6 text-[#d3bcb6]">{ADDRESS}</p>
+              <h3 className="font-display text-lg text-[#C41E3A]">Find us</h3>
+              <p className="mt-2 leading-6 text-[#4a3034]">{ADDRESS}</p>
             </div>
             <div>
-              <h3 className="font-display text-lg text-red-200">Opening hours</h3>
-              <p className="mt-2 leading-6 text-[#d3bcb6]">{OPENING_HOURS}</p>
+              <h3 className="font-display text-lg text-[#C41E3A]">Opening hours</h3>
+              <p className="mt-2 leading-6 text-[#4a3034]">{OPENING_HOURS}</p>
             </div>
             <div>
-              <h3 className="font-display text-lg text-red-200">Contact</h3>
-              <p className="mt-2 leading-6 text-[#d3bcb6]">
-                <a href={PHONE_LINK} className="hover:text-red-200">{PHONE_DISPLAY}</a>
+              <h3 className="font-display text-lg text-[#C41E3A]">Contact</h3>
+              <p className="mt-2 leading-6 text-[#4a3034]">
+                <a href={PHONE_LINK} className="hover:text-[#C41E3A]">{PHONE_DISPLAY}</a>
                 <br />
-                <ExtLink href={WHATSAPP_URL} className="hover:text-red-200">Message on WhatsApp</ExtLink>
+                <ExtLink href={WHATSAPP_URL} className="hover:text-[#C41E3A]">Message on WhatsApp</ExtLink>
               </p>
             </div>
           </div>
@@ -353,28 +354,28 @@ export default function HomePage() {
 
         {/* 12. Local SEO paragraph */}
         <section className="mx-auto max-w-3xl px-6 pb-20 text-center">
-          <h2 className="font-display text-2xl font-semibold text-red-100 sm:text-3xl">Your local cake destination</h2>
-          <p className="mt-5 leading-8 text-[#cdb5af]">
+          <h2 className="font-display text-2xl font-semibold text-[#3a0a12] sm:text-3xl">Your local cake destination</h2>
+          <p className="mt-5 leading-8 text-[#4a3034]">
             Sera Cakes by Reeba brings together classic flavours, indulgent chocolate cakes, artisan treats and custom
             celebration cakes in one place. Whether you're searching for a birthday cake, custom cake, anniversary cake or
             a special dessert, explore our menu and find something made for your occasion.
           </p>
-          <p className="mt-4 leading-8 text-[#cdb5af]">
+          <p className="mt-4 leading-8 text-[#4a3034]">
             If you're looking for cakes in {LOCATION}, browse our digital menu and order directly through WhatsApp.
           </p>
         </section>
 
         {/* 13. FAQ */}
-        <section className="border-y border-white/5 bg-[#1b060b] px-6 py-20">
+        <section className="border-y border-black/10 bg-[#EEDBAA] px-6 py-20">
           <SectionHead title="Frequently asked questions" />
-          <div className="mx-auto mt-10 max-w-3xl divide-y divide-white/10 rounded-2xl border border-white/10 bg-[#1e0910]">
+          <div className="mx-auto mt-10 max-w-3xl divide-y divide-black/10 rounded-2xl border border-black/10 bg-white/60">
             {FAQS.map((f) => (
               <details key={f.q} className="group px-6 py-4">
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-medium text-[#f3e2de]">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-medium text-[#2b0a10]">
                   {f.q}
-                  <span className="text-red-300 transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+                  <span className="text-[#C41E3A] transition-transform group-open:rotate-45" aria-hidden="true">+</span>
                 </summary>
-                <p className="mt-3 text-sm leading-6 text-[#cdb5af]">{f.a}</p>
+                <p className="mt-3 text-sm leading-6 text-[#4a3034]">{f.a}</p>
               </details>
             ))}
           </div>
@@ -382,59 +383,59 @@ export default function HomePage() {
 
         {/* 14. Final CTA */}
         <section className="px-6 py-24 text-center">
-          <h2 className="font-display mx-auto max-w-2xl text-4xl font-semibold leading-tight text-red-100 sm:text-5xl">
+          <h2 className="font-display mx-auto max-w-2xl text-4xl font-semibold leading-tight text-[#3a0a12] sm:text-5xl">
             Let's make your celebration sweeter.
           </h2>
-          <p className="mx-auto mt-5 max-w-xl leading-7 text-[#d3bcb6]">
+          <p className="mx-auto mt-5 max-w-xl leading-7 text-[#4a3034]">
             Whether you already know what you want or you're still looking for the perfect cake, we're ready to help.
           </p>
           <div className="mt-9 flex flex-wrap justify-center gap-4">
             <ExtLink href={MENU_URL} className={btnPrimary}>Explore full menu</ExtLink>
             <ExtLink href={WHATSAPP_URL} className={btnGhost}>Order on WhatsApp</ExtLink>
           </div>
-          <p className="mt-6 text-sm text-[#b39d97]">Fresh cakes. Custom creations. Sweet celebrations.</p>
+          <p className="mt-6 text-sm text-[#6b5256]">Fresh cakes. Custom creations. Sweet celebrations.</p>
         </section>
       </main>
 
       {/* 15. Footer */}
-      <footer className="border-t border-white/10 bg-[#120306] px-6 py-14">
-        <div className="mx-auto grid max-w-7xl gap-10 text-sm text-[#cdb5af] sm:grid-cols-2 lg:grid-cols-4">
+      <footer className="border-t border-black/10 bg-[#EEDBAA] px-6 py-14">
+        <div className="mx-auto grid max-w-7xl gap-10 text-sm text-[#4a3034] sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <p className="font-brand text-4xl leading-none text-[#ffe3e6]">Sera Cakes</p>
-            <p className="mt-1 text-xs tracking-wide text-[#b39d97]">by Reeba</p>
+            <p className="font-brand text-4xl leading-none text-[#C41E3A]">Sera Cakes</p>
+            <p className="mt-1 text-xs tracking-wide text-[#6b5256]">by Reeba</p>
             <p className="mt-4 max-w-xs leading-6">Fresh cakes and custom creations made for life's sweetest moments.</p>
           </div>
           <div>
-            <h3 className="font-display text-base text-red-200">Quick links</h3>
+            <h3 className="font-display text-base text-[#C41E3A]">Quick links</h3>
             <ul className="mt-3 space-y-2">
-              <li><a href="#top" className="hover:text-red-200">Home</a></li>
-              <li><a href="#about" className="hover:text-red-200">About</a></li>
-              <li><a href="#cakes" className="hover:text-red-200">Cakes</a></li>
-              <li><a href="#custom" className="hover:text-red-200">Custom cakes</a></li>
-              <li><a href="#gallery" className="hover:text-red-200">Gallery</a></li>
-              <li><a href="#contact" className="hover:text-red-200">Contact</a></li>
+              <li><a href="#top" className="hover:text-[#C41E3A]">Home</a></li>
+              <li><a href="#about" className="hover:text-[#C41E3A]">About</a></li>
+              <li><a href="#cakes" className="hover:text-[#C41E3A]">Cakes</a></li>
+              <li><a href="#custom" className="hover:text-[#C41E3A]">Custom cakes</a></li>
+              <li><a href="#gallery" className="hover:text-[#C41E3A]">Gallery</a></li>
+              <li><a href="#contact" className="hover:text-[#C41E3A]">Contact</a></li>
             </ul>
           </div>
           <div>
-            <h3 className="font-display text-base text-red-200">Order</h3>
+            <h3 className="font-display text-base text-[#C41E3A]">Order</h3>
             <ul className="mt-3 space-y-2">
-              <li><ExtLink href={MENU_URL} className="hover:text-red-200">Digital menu</ExtLink></li>
-              <li><ExtLink href={WHATSAPP_URL} className="hover:text-red-200">WhatsApp</ExtLink></li>
-              <li><a href={PHONE_LINK} className="hover:text-red-200">Call us</a></li>
+              <li><ExtLink href={MENU_URL} className="hover:text-[#C41E3A]">Digital menu</ExtLink></li>
+              <li><ExtLink href={WHATSAPP_URL} className="hover:text-[#C41E3A]">WhatsApp</ExtLink></li>
+              <li><a href={PHONE_LINK} className="hover:text-[#C41E3A]">Call us</a></li>
             </ul>
           </div>
           <div>
-            <h3 className="font-display text-base text-red-200">Location</h3>
+            <h3 className="font-display text-base text-[#C41E3A]">Location</h3>
             <p className="mt-3 leading-6">{ADDRESS}</p>
             {(INSTAGRAM_URL || FACEBOOK_URL) && (
               <ul className="mt-4 flex gap-4">
-                {INSTAGRAM_URL && <li><ExtLink href={INSTAGRAM_URL} className="hover:text-red-200">Instagram</ExtLink></li>}
-                {FACEBOOK_URL && <li><ExtLink href={FACEBOOK_URL} className="hover:text-red-200">Facebook</ExtLink></li>}
+                {INSTAGRAM_URL && <li><ExtLink href={INSTAGRAM_URL} className="hover:text-[#C41E3A]">Instagram</ExtLink></li>}
+                {FACEBOOK_URL && <li><ExtLink href={FACEBOOK_URL} className="hover:text-[#C41E3A]">Facebook</ExtLink></li>}
               </ul>
             )}
           </div>
         </div>
-        <p className="mx-auto mt-12 max-w-7xl border-t border-white/10 pt-6 text-xs text-[#9c8781]">
+        <p className="mx-auto mt-12 max-w-7xl border-t border-black/10 pt-6 text-xs text-[#6b5256]">
           Copyright © 2026 {BRAND}. All rights reserved.
         </p>
       </footer>
