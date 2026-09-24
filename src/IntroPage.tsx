@@ -96,7 +96,7 @@ export default function IntroPage() {
             style={{ backgroundColor: "#C41E3A" }}
             className="mt-8 rounded-full px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-red-700/20 transition-colors hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-400 focus-visible:ring-offset-2"
           >
-            Order Now
+            Explore Now
           </motion.button>
         </motion.div>
       </div>
