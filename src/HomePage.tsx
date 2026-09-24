@@ -47,11 +47,11 @@ const OCCASIONS = [
 ];
 
 const WHY = [
-  { title: "Freshly made", text: "We focus on delivering cakes that are fresh and enjoyable for your celebration." },
-  { title: "Beautifully crafted", text: "From simple classics to detailed custom creations, presentation matters." },
-  { title: "Variety of flavours", text: "Choose from chocolate, vanilla, strawberry, red velvet, Biscoff, fruit-based flavours and more." },
-  { title: "Made for your occasion", text: "Birthday, anniversary, wedding or a simple sweet craving — there's a cake for it." },
-  { title: "Easy ordering", text: "Browse the complete menu and place your order directly through WhatsApp." },
+  { title: "Freshly made", text: "We love making freshly made cakes for your celebration or just because!" },
+  { title: "Beautifully presented", text: "We offer a variety of simple classic flavours to more intricate designer cakes. All our cakes are beautifully presented and made with fresh ingredients." },
+  { title: "Variety of flavours", text: "Our range of cake flavours include: chocolate, vanilla, strawberry, red velvet, Biscoff, fruit flavours and many more." },
+  { title: "Perfect for any occasion", text: "Whether you are ordering a birthday cake, anniversary cake, wedding cake, or just a simple treat, we have something for everyone. " },
+  { title: "Simple ordering process", text: "To order simply browse our menu and contact us via WhatsApp." },
 ];
 
 const STEPS = [
@@ -156,14 +156,14 @@ export default function HomePage() {
             <div className="relative z-10">
               <p className="font-brand text-4xl leading-none text-[#C41E3A]">Sera Cakes by Reeba</p>
               <h1 className="font-display mt-5 text-4xl font-semibold leading-[1.08] text-[#2b0a10] sm:text-6xl">
-                Cakes made for moments worth celebrating
+                Cakes Made for Moments Worth Celebrating
               </h1>
               <p className="mt-6 max-w-lg text-base leading-7 text-[#4a3034]">
-                From classic cakes to handcrafted custom creations, Sera Cakes by Reeba makes fresh and beautiful cakes for
+                From classic cakes to custom creations, Sera Cakes by Reeba offers freshly baked, beautiful cakes for
                 birthdays, anniversaries, weddings and every special occasion.
               </p>
               <div className="mt-9 flex flex-wrap gap-4">
-                <ExtLink href={MENU_URL} className={btnPrimary}>Explore our cakes</ExtLink>
+                <ExtLink href={MENU_URL} className={btnPrimary}>Explore Our Cakes</ExtLink>
                 <ExtLink href={WHATSAPP_URL} className={btnGhost}>Order on WhatsApp</ExtLink>
               </div>
               <p className="mt-6 text-sm text-[#6b5256]">Freshly baked. Custom cakes. Made for every celebration.</p>
@@ -178,24 +178,24 @@ export default function HomePage() {
 
         {/* 2. About */}
         <section id="about" className="mx-auto max-w-3xl scroll-mt-20 px-6 py-20 text-center">
-          <h2 className="font-display text-3xl font-semibold text-[#3a0a12] sm:text-4xl">More than just a cake</h2>
+          <h2 className="font-display text-3xl font-semibold text-[#3a0a12] sm:text-4xl">More Than Just A Cake</h2>
           <p className="mt-6 leading-8 text-[#4a3034]">
             At Sera Cakes by Reeba, we believe a cake is more than a dessert — it's part of the memory.
           </p>
           <p className="mt-4 leading-8 text-[#4a3034]">
-            From simple classic flavours to elaborate celebration cakes, we create cakes with attention to flavour,
-            presentation and detail. Whether you're celebrating a birthday, anniversary, wedding or simply craving
-            something sweet, we're here to make your occasion a little more special.
+            From simple classic flavours to elaborate celebration cakes we use our skills to make sure you receive a
+            beautiful and delicious cake. Whether you need a birthday cake, anniversary cake, wedding cake or even just a
+            simple treat we'll try to help you make your day a little bit more special.
           </p>
           <p className="mt-4 leading-8 text-[#4a3034]">
             Looking for a cake shop in {LOCATION}? Explore our cakes and order directly through our online menu.
           </p>
-          <ExtLink href={MENU_URL} className={`${btnGhost} mt-8`}>Discover our cakes</ExtLink>
+          <ExtLink href={MENU_URL} className={`${btnGhost} mt-8`}>Discover Our Cakes</ExtLink>
         </section>
 
         {/* 3. Menu preview */}
         <section id="cakes" className="scroll-mt-20 border-y border-black/10 bg-[#EEDBAA] px-6 py-20">
-          <SectionHead title="Something for every sweet craving" text="Explore some of our popular cake selections, from everyday classics to indulgent signature bakes." />
+          <SectionHead title="Something for every sweet craving." text="See some of our popular cake picks, from everyday classics to indulgent signature bakes." />
           <div className="mx-auto mt-12 grid max-w-7xl gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {CATEGORIES.map((c) => (
               <div key={c.name} className="rounded-2xl border border-black/10 bg-white/60 p-6">
@@ -240,12 +240,12 @@ export default function HomePage() {
         {/* 5. Custom cakes */}
         <section id="custom" className="scroll-mt-20 px-6 pb-20">
           <div className="mx-auto max-w-5xl rounded-[32px] border border-red-400/25 bg-[#EEDBAA] px-8 py-16 text-center sm:px-16">
-            <h2 className="font-display text-3xl font-semibold text-[#3a0a12] sm:text-5xl">Your idea. Our cake.</h2>
+            <h2 className="font-display text-3xl font-semibold text-[#3a0a12] sm:text-5xl">Your Idea. Our Cake.</h2>
             <p className="mt-5 text-lg text-[#4a3034]">Have something special in mind?</p>
             <p className="mx-auto mt-4 max-w-2xl leading-7 text-[#4a3034]">
-              Whether you have a theme, colour combination, character, reference image or completely new idea, talk to us
-              about creating a custom cake for your celebration. From birthday cakes to personalised celebration cakes,
-              we'll help bring your idea to life.
+              Whether you have a theme, color combination, character, reference image or something truly new and unique, come and let us know
+              about creating a cake for your celebration. From birthday cakes to personalized celebration cakes,
+              we will help bring your idea to life.
             </p>
             <ExtLink href={WHATSAPP_URL} className={`${btnPrimary} mt-8`}>Discuss your custom cake</ExtLink>
           </div>
@@ -281,7 +281,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* 8. Ordering process */}
+        <p className="-mt-8 px-6 pb-16 text-center font-display text-2xl font-semibold text-[#3a0a12]">Let's get your order in!</p> {/* 8. Ordering process */}
         <section className="border-y border-black/10 bg-[#EEDBAA] px-6 py-20">
           <SectionHead title="Your cake is just a few clicks away" />
           <ol className="mx-auto mt-12 grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
