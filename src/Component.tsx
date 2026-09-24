@@ -9,7 +9,7 @@ const SHOWCASE_IMAGES = [
   "https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=900&q=85",
   "https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=900&q=85",
   "https://images.unsplash.com/photo-1557925923-cd4648e211a0?auto=format&fit=crop&w=900&q=85",
-  "https://images.unsplash.com/photo-1519864806341-9b69221159a0?auto=format&fit=crop&w=900&q=85",
+    "/products/pistachio.jpg",,
   "https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&w=900&q=85",
   "https://images.unsplash.com/photo-1621303837174-89787a7d4729?auto=format&fit=crop&w=900&q=85",
 ];
