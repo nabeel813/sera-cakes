@@ -20,3 +20,13 @@
 .font-tagline {
   font-family: "Della Respira", serif;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
