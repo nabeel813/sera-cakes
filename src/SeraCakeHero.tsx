@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useCallback, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+
 
 const PRODUCT_IMAGE =
   "https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=1800";
@@ -885,7 +885,7 @@ export default function SeraCakeHero() {
       <h1 className="va-title va-title-left">Velvet Layers</h1>
       <h2 className="va-title va-title-right">Pure Bliss</h2>
 
-      <Link className="va-card-area" to="/home">
+      <a className="va-card-area" href="https://wa.me/919947300880?text=Hi%20Sera%20Cakes%2C%20I%27d%20like%20to%20order" target="_blank" rel="noopener noreferrer">
         <div className="va-card-wrap">
           <img
             className="va-card-image"
@@ -901,7 +901,7 @@ export default function SeraCakeHero() {
             ↗
           </span>
         </span>
-      </Link>
+      </a>
 
       <button
         className="va-side-control"
