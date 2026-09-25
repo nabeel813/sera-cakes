@@ -310,11 +310,11 @@ export default function OrderPage() {
                     </a>
 
           <nav className="hidden items-center gap-8 text-sm text-[#d9c3bd] lg:flex">
-            
-            
-            
-            
-          </nav>
+  <a href="/" className="transition-colors hover:text-red-300">Home</a>
+  <a href="/#about" className="transition-colors hover:text-red-300">About</a>
+  <a href="#menu" className="transition-colors hover:text-red-300">Cakes</a>
+
+</nav>          
 
           <div className="flex items-center gap-5">
             <span className="hidden items-center gap-2 text-sm text-[#d9c3bd] sm:flex">
