@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+
 
 const MENU_URL = "https://dm.newintro.in/menu/sera-cakes/";
 const VIDEO_URL = "products/red.mp4";
@@ -301,10 +301,10 @@ export default function OrderPage() {
       {/* Header */}
       <header className="sticky top-0 z-30 border-b border-white/5 bg-[#170408]/80 backdrop-blur-md">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-4">
-          <Link to="/" className="flex items-center gap-2 text-2xl tracking-tight text-[#f8ece9]">
+          <a href="/" className="flex items-center gap-2 text-2xl tracking-tight text-[#f8ece9]">
             <span className="text-red-400">✦</span>
             <span className="font-brand text-3xl leading-none">Sera Cake Shop</span>
-          </Link>
+                    </a>
 
           <nav className="hidden items-center gap-8 text-sm text-[#d9c3bd] lg:flex">
             
