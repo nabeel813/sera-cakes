@@ -3,7 +3,7 @@ import { useState } from "react";
 
 const MENU_URL = "https://dm.newintro.in/menu/sera-cakes/";
 const VIDEO_URL = "products/red.mp4";
-const WHATSAPP_URL = "https://wa.me/919947300880?text=Hi%20Sera%20Cakes%2C%20I%27d%20like%20to%20order";
+const WHATSAPP_URL = "https://wa.me/+919633559746?text=Hi%20Sera%20Cakes%2C%20I%27d%20like%20to%20order";
 
 type Category =
   | "Budget Bliss"
@@ -484,6 +484,8 @@ export default function OrderPage() {
           </a>
         </div>
       </section>
+
+      {/* Stats */} <section className="mx-auto max-w-5xl px-6 pb-20"> <div className="grid grid-cols-1 gap-10 rounded-3xl border border-white/5 bg-[#1e0910] px-8 py-10 text-center sm:grid-cols-3"> <div> <p className="text-3xl">🎂</p> <p className="font-display mt-3 text-3xl font-semibold text-red-200">12+ Years</p> <p className="mt-1 text-sm text-[#d3bcb6]">of Sweetness</p> </div> <div className="sm:border-x sm:border-white/10"> <p className="text-3xl">❤️</p> <p className="font-display mt-3 text-3xl font-semibold text-red-200">1,000+</p> <p className="mt-1 text-sm text-[#d3bcb6]">Happy Customers</p> </div> <div> <p className="text-3xl">🧁</p> <p className="font-display mt-3 text-3xl font-semibold text-red-200">10,000+</p> <p className="mt-1 text-sm text-[#d3bcb6]">Cakes Crafted</p> </div> </div> </section>
             {/* About Us */}
       <section className="mx-auto max-w-7xl px-6 py-20">
         <div className="flex flex-col items-center gap-10 lg:flex-row">
