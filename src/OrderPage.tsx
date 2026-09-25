@@ -303,7 +303,7 @@ export default function OrderPage() {
        <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 h-20">
           <a href="/" className="flex items-center gap-2 text-2xl tracking-tight text-[#f8ece9]">
             
-             <img src="/products/logo.png" alt="Sera Cakes" className="h-full w-auto object-contain py-2" />
+             <img src="/products/logo.png" alt="Sera Cakes" className="h-14 w-auto object-contain" />
                     </a>
 
           <nav className="hidden items-center gap-8 text-sm text-[#d9c3bd] lg:flex">
