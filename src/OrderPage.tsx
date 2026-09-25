@@ -345,17 +345,16 @@ export default function OrderPage() {
           {/* Left content */}
           <div className="relative z-10">
             <span className="inline-flex items-center rounded-full border border-red-400/30 bg-red-400/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-red-300">
-              Handcrafted Daily
+              Sera Cakes by Reeba
             </span>
 
             <h1 className="font-display mt-6 max-w-xl text-5xl font-semibold leading-[1.05] text-[#f9ece9] sm:text-6xl">
-              Artisan Cakes &amp; Pastries
+              Cakes Made for Moments Worth Celebrating
             </h1>
 
             <p className="mt-6 max-w-md text-base leading-7 text-[#d3bcb6]">
-              Every layer is built by hand with premium ingredients and
-              traditional technique — no shortcuts, just patient craft and
-              real flavor, baked fresh each morning.
+              From classic cakes to custom creations, Sera Cakes by Reeba offers freshly baked, beautiful cakes for birthdays, anniversaries, weddings, and every special occasion.
+
             </p>
 
             <div className="mt-9 flex flex-wrap items-center gap-5">
@@ -403,6 +402,74 @@ export default function OrderPage() {
         </div>
       </section>
 
+            {/* Some of our products */}
+      <section className="mx-auto max-w-7xl px-6 py-20">
+        <div className="flex flex-col items-center text-center">
+          <span className="text-xs font-semibold uppercase tracking-[0.3em] text-red-400/80">
+            Fan favourites
+          </span>
+          <h2 className="font-display mt-3 text-4xl font-semibold text-red-200 sm:text-[44px]">
+            Some Of Our Products
+          </h2>
+        </div>
+
+        <div className="mt-10 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-5">
+          {[
+            { name: "White Chocolate Loaded", price: "₹1300", image: "/products/whitechoclate.jpg" },
+            { name: "Nutella Hazelnut", price: "₹1600", image: "/products/nutella.jpg" },
+            { name: "Fresh Strawberry", price: "₹1450", image: "/products/fresh.jpg" },
+            { name: "Chocolate Strawberry Pistachio", price: "₹1500", image: "/products/pistachio.jpg" },
+            { name: "Fresh Fruit Gateaux", price: "₹1300", image: "/products/freshfruit.jpg" },
+          ].map((item) => (
+            <div key={item.name} className="group overflow-hidden rounded-2xl border border-white/5 bg-[#1e0910]">
+              <div className="h-32 overflow-hidden sm:h-40">
+                <img src={item.image} alt={item.name} loading="lazy" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              </div>
+              <div className="p-3 text-center">
+                <p className="text-xs font-medium text-[#f3e2de] sm:text-sm">{item.name}</p>
+                <p className="mt-1 text-xs text-red-300">{item.price}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-10 text-center">
+          <a href="#menu" className="inline-flex items-center justify-center rounded-full bg-[#C41E3A] px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-red-900/30 transition-colors hover:bg-[#a8172f]">
+            View All Products
+          </a>
+        </div>
+      </section>
+            {/* About Us */}
+      <section className="mx-auto max-w-7xl px-6 py-20">
+        <div className="flex flex-col items-center gap-10 lg:flex-row">
+          <div className="w-full lg:w-2/5">
+            <img
+              src="/products/reeba.jpg"
+              alt="Reeba, founder of Sera Cakes by Reeba, holding a handcrafted cake"
+              className="w-full rounded-[28px] border border-white/5 object-cover shadow-[0_30px_70px_rgba(0,0,0,0.5)]"
+            />
+          </div>
+
+          <div className="w-full text-center lg:w-3/5 lg:text-left">
+            <h2 className="font-display text-4xl font-semibold text-red-200 sm:text-[44px]">
+              More Than Just A Cake
+            </h2>
+            <p className="mt-6 leading-8 text-[#d3bcb6]">
+              At Sera Cakes by Reeba, we believe that a cake is not just a cake, it's a part of the memory that is being created.
+            </p>
+            <p className="mt-4 leading-8 text-[#d3bcb6]">
+              From simple classic flavours to elaborate celebration cakes we use our skills to make sure you receive a beautiful and delicious cake. Whether you need a birthday cake, anniversary cake, wedding cake or even just a simple treat we'll try to help you make your day a little bit more special.
+            </p>
+            
+              <a href="#menu"
+              className="mt-8 inline-flex items-center justify-center rounded-full border border-white/20 px-7 py-3.5 text-sm font-semibold text-[#f3e2de] transition-colors hover:border-red-300/60 hover:text-red-200"
+            >
+              Discover Our Cakes
+            </a>
+          </div>
+        </div>
+      </section>
+      
       {/* Customer Favourites */}
       <section id="menu" className="mx-auto max-w-7xl px-6 py-20">
         <div className="flex flex-col items-center text-center">
