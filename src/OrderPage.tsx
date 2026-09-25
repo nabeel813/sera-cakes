@@ -444,7 +444,7 @@ export default function OrderPage() {
         <div className="flex flex-col items-center gap-10 lg:flex-row">
           <div className="w-full lg:w-2/5">
             <img
-              src="/products/reeba.jpg"
+              src="/products/ree.png"
               alt="Reeba, founder of Sera Cakes by Reeba, holding a handcrafted cake"
               className="w-full rounded-[28px] border border-white/5 object-cover shadow-[0_30px_70px_rgba(0,0,0,0.5)]"
             />
