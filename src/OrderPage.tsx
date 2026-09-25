@@ -196,7 +196,23 @@ function CartIcon() {
     </svg>
   );
 }
+function InstagramIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="h-5 w-5" aria-hidden="true">
+      <rect x="3" y="3" width="18" height="18" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
 
+function FacebookIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="h-5 w-5" aria-hidden="true">
+      <path d="M15 8.5h-2a2 2 0 0 0-2 2V13H8.5v3H11v6h3v-6h2.2l.8-3H14v-2c0-.3.2-.5.5-.5H16z" />
+    </svg>
+  );
+}
 
 
 function PhoneIcon() {
@@ -544,12 +560,11 @@ export default function OrderPage() {
 <footer className="border-t border-white/10 bg-[#1e0910] px-6 py-14 text-[#d3bcb6]">
   <div className="mx-auto grid max-w-7xl gap-10 text-sm sm:grid-cols-2 lg:grid-cols-4">
     <div>
-      <p className="font-brand text-4xl leading-none text-[#C41E3A]">Sera Cakes</p>
-      <p className="mt-1 text-xs tracking-wide text-[#b39d97]">by Reeba</p>
-      <p className="mt-4 max-w-xs leading-6">
-        Fresh cakes and custom creations made for life's sweetest moments.
-      </p>
-    </div>
+  <img src="/products/logo.png" alt="Sera Cakes by Reeba" className="h-16 w-auto object-contain" />
+  <p className="mt-4 max-w-xs leading-6">
+    Fresh cakes and custom creations made for life's sweetest moments.
+  </p>
+</div>
 
     <div>
       <h3 className="font-display text-base text-[#C41E3A]">Quick Links</h3>
@@ -583,18 +598,18 @@ export default function OrderPage() {
       </p>
 
       <h3 className="mt-5 font-display text-base text-[#C41E3A]">Social</h3>
-      <ul className="mt-3 flex gap-4">
-        <li>
-          <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="hover:text-red-300">
-            Instagram
-          </a>
-        </li>
-        <li>
-          <a href={FACEBOOK_URL} target="_blank" rel="noopener noreferrer" className="hover:text-red-300">
-            Facebook
-          </a>
-        </li>
-      </ul>
+<ul className="mt-3 flex gap-4">
+  <li>
+    <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-[#d3bcb6] hover:border-red-400/50 hover:text-red-300">
+      <InstagramIcon />
+    </a>
+  </li>
+  <li>
+    <a href={FACEBOOK_URL} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-[#d3bcb6] hover:border-red-400/50 hover:text-red-300">
+      <FacebookIcon />
+    </a>
+  </li>
+</ul>
     </div>
   </div>
 

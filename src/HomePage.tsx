@@ -111,7 +111,23 @@ function ExtLink({ href, className, children }: { href: string; className: strin
     </a>
   );
 }
+function InstagramIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="h-5 w-5" aria-hidden="true">
+      <rect x="3" y="3" width="18" height="18" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
 
+function FacebookIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="h-5 w-5" aria-hidden="true">
+      <path d="M15 8.5h-2a2 2 0 0 0-2 2V13H8.5v3H11v6h3v-6h2.2l.8-3H14v-2c0-.3.2-.5.5-.5H16z" />
+    </svg>
+  );
+}
 function SectionHead({ title, text }: { title: string; text?: string }) {
   return (
     <div className="mx-auto max-w-2xl text-center">
@@ -401,10 +417,9 @@ export default function HomePage() {
       <footer className="border-t border-black/10 bg-[#EEDBAA] px-6 py-14">
         <div className="mx-auto grid max-w-7xl gap-10 text-sm text-[#4a3034] sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <p className="font-brand text-4xl leading-none text-[#C41E3A]">Sera Cakes</p>
-            <p className="mt-1 text-xs tracking-wide text-[#6b5256]">by Reeba</p>
-            <p className="mt-4 max-w-xs leading-6">Fresh cakes and custom creations made for life's sweetest moments.</p>
-          </div>
+  <img src="/products/logo.png" alt="Sera Cakes by Reeba" className="h-16 w-auto object-contain" />
+  <p className="mt-4 max-w-xs leading-6">Fresh cakes and custom creations made for life's sweetest moments.</p>
+</div>
           <div>
             <h3 className="font-display text-base text-[#C41E3A]">Quick links</h3>
             <ul className="mt-3 space-y-2">
@@ -428,11 +443,23 @@ export default function HomePage() {
             <h3 className="font-display text-base text-[#C41E3A]">Location</h3>
             <p className="mt-3 leading-6">{ADDRESS}</p>
             {(INSTAGRAM_URL || FACEBOOK_URL) && (
-              <ul className="mt-4 flex gap-4">
-                {INSTAGRAM_URL && <li><ExtLink href={INSTAGRAM_URL} className="hover:text-[#C41E3A]">Instagram</ExtLink></li>}
-                {FACEBOOK_URL && <li><ExtLink href={FACEBOOK_URL} className="hover:text-[#C41E3A]">Facebook</ExtLink></li>}
-              </ul>
-            )}
+  <ul className="mt-4 flex gap-4">
+    {INSTAGRAM_URL && (
+      <li>
+        <ExtLink href={INSTAGRAM_URL} className="flex h-9 w-9 items-center justify-center rounded-full border border-black/10 text-[#4a3034] hover:border-[#C41E3A]/50 hover:text-[#C41E3A]">
+          <InstagramIcon />
+        </ExtLink>
+      </li>
+    )}
+    {FACEBOOK_URL && (
+      <li>
+        <ExtLink href={FACEBOOK_URL} className="flex h-9 w-9 items-center justify-center rounded-full border border-black/10 text-[#4a3034] hover:border-[#C41E3A]/50 hover:text-[#C41E3A]">
+          <FacebookIcon />
+        </ExtLink>
+      </li>
+    )}
+  </ul>
+)}
           </div>
         </div>
         <p className="mx-auto mt-12 max-w-7xl border-t border-black/10 pt-6 text-xs text-[#6b5256]">
