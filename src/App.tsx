@@ -1,5 +1,5 @@
-import SeraCakeHero from "./SeraCakeHero";
+import OrderPage from "./OrderPage";
 
 export default function App() {
-  return <SeraCakeHero />;
+  return <OrderPage />;
 }
