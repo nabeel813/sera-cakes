@@ -417,7 +417,7 @@ export default function HomePage() {
       <footer className="border-t border-black/10 bg-[#EEDBAA] px-6 py-14">
         <div className="mx-auto grid max-w-7xl gap-10 text-sm text-[#4a3034] sm:grid-cols-2 lg:grid-cols-4">
           <div>
-  <img src="/products/logo.png" alt="Sera Cakes by Reeba" className="h-16 w-auto object-contain" />
+  <img src="/products/logo.png" alt="Sera Cakes by Reeba" className="h-20 w-auto object-contain" />
   <p className="mt-4 max-w-xs leading-6">Fresh cakes and custom creations made for life's sweetest moments.</p>
 </div>
           <div>
