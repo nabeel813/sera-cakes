@@ -300,10 +300,10 @@ export default function OrderPage() {
     <div className="font-ui min-h-screen bg-[#170408] text-[#f8ece9]">
       {/* Header */}
       <header className="sticky top-0 z-30 border-b border-white/5 bg-[#170408]/80 backdrop-blur-md">
-       <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-4">
+       <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 h-20">
           <a href="/" className="flex items-center gap-2 text-2xl tracking-tight text-[#f8ece9]">
             
-             <img src="/products/logo.png" alt="Sera Cakes" className="h-30 w-auto rounded" />
+             <img src="/products/logo.png" alt="Sera Cakes" className="h-full w-auto object-contain py-2" />
                     </a>
 
           <nav className="hidden items-center gap-8 text-sm text-[#d9c3bd] lg:flex">
