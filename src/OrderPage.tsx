@@ -4,7 +4,8 @@ import { useState } from "react";
 const MENU_URL = "https://dm.newintro.in/menu/sera-cakes/";
 const VIDEO_URL = "products/red.mp4";
 const WHATSAPP_URL = "https://wa.me/+919633559746?text=Hi%20Sera%20Cakes%2C%20I%27d%20like%20to%20order";
-
+const INSTAGRAM_URL = "https://www.instagram.com/sera_cakes_by_reeba?stkn=YnB5YTNzanlpa2Fh";
+const FACEBOOK_URL = "https://www.facebook.com/profile.php?id=61594897525336";
 type Category =
   | "Budget Bliss"
   | "Chocolate Obsession"
@@ -346,14 +347,14 @@ export default function OrderPage() {
       <span className="inline-flex items-center rounded-full border border-white/30 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-white">
         Sera Cakes by Reeba
       </span>
-      <h2 className="font-display mt-5 text-4xl font-bold uppercase leading-[1.05] text-white sm:text-5xl lg:text-6xl">
-        Cakes Made
-        <br />
-        With Love
-      </h2>
-      <p className="mt-5 max-w-md text-base leading-7 text-white/90 mx-auto lg:mx-0">
-        Freshly baked, handcrafted cakes for every celebration — order yours in one message.
-      </p>
+     <h2 className="font-display mt-5 text-4xl font-bold uppercase leading-[1.05] text-white sm:text-5xl lg:text-6xl">
+  Custom Cakes
+  <br />
+  Made For You
+</h2>
+<p className="mt-5 max-w-md text-base leading-7 text-white/90 mx-auto lg:mx-0">
+  Tell us your flavour, design and occasion — we'll bake it exactly the way you want it.
+</p>
       
        <a href={WHATSAPP_URL}
         target="_blank"
@@ -656,17 +657,24 @@ export default function OrderPage() {
       </ul>
     </div>
 
-    <div>
+        <div>
       <h3 className="font-display text-base text-[#C41E3A]">Location</h3>
       <p className="mt-3 leading-6">
         Sera Cakes, Sea View Ward, Cullen Road, Alleppey (Alappuzha) 688001
       </p>
 
-      {/* Add real URLs here to show these */}
       <h3 className="mt-5 font-display text-base text-[#C41E3A]">Social</h3>
       <ul className="mt-3 flex gap-4">
-        <li><a href="#" className="hover:text-red-300">Instagram</a></li>
-        <li><a href="#" className="hover:text-red-300">Facebook</a></li>
+        <li>
+          <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="hover:text-red-300">
+            Instagram
+          </a>
+        </li>
+        <li>
+          <a href={FACEBOOK_URL} target="_blank" rel="noopener noreferrer" className="hover:text-red-300">
+            Facebook
+          </a>
+        </li>
       </ul>
     </div>
   </div>
