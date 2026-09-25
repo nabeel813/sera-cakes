@@ -295,7 +295,7 @@ function WhatsAppButton() {
 export default function OrderPage() {
   const [activeFilter, setActiveFilter] = useState<Category>("Signature Bakes");
   const [hoveredId, setHoveredId] = useState<string | null>(null);
-  
+  const [menuOpen, setMenuOpen] = useState(false);  
 
   const visibleProducts = PRODUCTS.filter((p) => p.category === activeFilter);
 
@@ -303,37 +303,57 @@ export default function OrderPage() {
     <div className="font-ui min-h-screen bg-[#170408] text-[#f8ece9]">
       {/* Header */}
       <header className="sticky top-0 z-30 border-b border-white/5 bg-[#170408]/80 backdrop-blur-md">
-       <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 h-20">
-          <a href="/" className="flex items-center gap-2 text-2xl tracking-tight text-[#f8ece9]">
-            
-             <img src="/products/logo.png" alt="Sera Cakes" className="h-24 w-auto object-contain" />
-                    </a>
+  <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 h-20">
+    <a href="/" className="flex items-center gap-2 text-2xl tracking-tight text-[#f8ece9]">
+      <img src="/products/logo.png" alt="Sera Cakes" className="h-24 w-auto object-contain" />
+    </a>
 
-          <nav className="hidden items-center gap-8 text-sm text-[#d9c3bd] lg:flex">
-  <a href="/" className="transition-colors hover:text-red-300">Home</a>
-  <a href="/#about" className="transition-colors hover:text-red-300">About</a>
-  <a href="#menu" className="transition-colors hover:text-red-300">Cakes</a>
+    <nav className="hidden items-center gap-8 text-sm text-[#d9c3bd] lg:flex">
+      <a href="/" className="hover:text-red-300">Home</a>
+      <a href="/#about" className="hover:text-red-300">About</a>
+      <a href="#menu" className="hover:text-red-300">Cakes</a>
+      <a href="/#custom" className="hover:text-red-300">Custom Cakes</a>
+      <a href="/#gallery" className="hover:text-red-300">Gallery</a>
+      <a href="/#contact" className="hover:text-red-300">Contact</a>
+    </nav>
 
-</nav>          
+    <div className="flex items-center gap-4">
+      <span className="hidden items-center gap-2 text-sm text-[#d9c3bd] sm:flex">
+        <PhoneIcon />
+        +919633559746
+      </span>
 
-          <div className="flex items-center gap-5">
-            <span className="hidden items-center gap-2 text-sm text-[#d9c3bd] sm:flex">
-              <PhoneIcon />
-              +919633559746
-            </span>
-            
-  <a href={MENU_URL}
-  target="_blank"
-  rel="noopener noreferrer"
-  aria-label="Open digital menu to order"
-  className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-[#f8ece9] transition-colors hover:border-red-400/50 hover:text-red-300"
->
-  <CartIcon />
-</a>
-          </div>
-        </div>
-      </header>
+      <a href={MENU_URL} target="_blank" rel="noopener noreferrer" aria-label="Open digital menu to order" className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-[#f8ece9] transition-colors hover:border-red-400/50 hover:text-red-300">
+        <CartIcon />
+      </a>
 
+      <button
+        type="button"
+        onClick={() => setMenuOpen((v) => !v)}
+        aria-label="Toggle menu"
+        aria-expanded={menuOpen}
+        className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-[#f8ece9] lg:hidden"
+      >
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-5 w-5" aria-hidden="true">
+          {menuOpen ? <path d="M6 6l12 12M18 6L6 18" /> : <path d="M4 7h16M4 12h16M4 17h16" />}
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  {menuOpen && (
+    <nav aria-label="Mobile" className="border-t border-white/5 bg-[#170408] px-6 py-4 lg:hidden">
+      <ul className="flex flex-col gap-4 text-sm text-[#d9c3bd]">
+        <li><a href="/" onClick={() => setMenuOpen(false)} className="block hover:text-red-300">Home</a></li>
+        <li><a href="/#about" onClick={() => setMenuOpen(false)} className="block hover:text-red-300">About</a></li>
+        <li><a href="#menu" onClick={() => setMenuOpen(false)} className="block hover:text-red-300">Cakes</a></li>
+        <li><a href="/#custom" onClick={() => setMenuOpen(false)} className="block hover:text-red-300">Custom Cakes</a></li>
+        <li><a href="/#gallery" onClick={() => setMenuOpen(false)} className="block hover:text-red-300">Gallery</a></li>
+        <li><a href="/#contact" onClick={() => setMenuOpen(false)} className="block hover:text-red-300">Contact</a></li>
+      </ul>
+    </nav>
+  )}
+</header>
 
       {/* Promo Banner */}
 <section className="relative overflow-hidden bg-[#C41E3A]">
@@ -568,10 +588,14 @@ export default function OrderPage() {
 
     <div>
       <h3 className="font-display text-base text-[#C41E3A]">Quick Links</h3>
-      <ul className="mt-3 space-y-2">
-        <li><a href="/" className="hover:text-red-300">Home</a></li>
-        <li><a href="/#about" className="hover:text-red-300">About</a></li>
-      </ul>
+<ul className="mt-3 space-y-2">
+  <li><a href="/" className="hover:text-red-300">Home</a></li>
+  <li><a href="/#about" className="hover:text-red-300">About</a></li>
+  <li><a href="#menu" className="hover:text-red-300">Cakes</a></li>
+  <li><a href="/#custom" className="hover:text-red-300">Custom Cakes</a></li>
+  <li><a href="/#gallery" className="hover:text-red-300">Gallery</a></li>
+  <li><a href="/#contact" className="hover:text-red-300">Contact</a></li>
+</ul>
     </div>
 
     <div>

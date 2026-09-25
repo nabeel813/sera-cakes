@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 /* ------------------------------------------------------------------
    Edit these values — everything on the page reads from here.
@@ -140,26 +141,57 @@ function SectionHead({ title, text }: { title: string; text?: string }) {
 /* ---------- page ---------- */
 
 export default function HomePage() {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <div className="font-ui min-h-screen bg-[#F2ECDF] text-[#2b0a10]">
       {/* Header */}
       <header className="sticky top-0 z-30 border-b border-black/10 bg-[#F2ECDF]/90 backdrop-blur-md">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-3">
-          <a href="#top" className="font-brand text-3xl leading-none text-[#C41E3A]">
-            Sera Cakes
-          </a>
-          <nav aria-label="Main" className="hidden items-center gap-7 text-sm text-[#4a3034] lg:flex">
-            {NAV.map(([label, href]) => (
-              <a key={href} href={href} className="transition-colors hover:text-[#C41E3A]">
-                {label}
-              </a>
-            ))}
-          </nav>
-          <ExtLink href={WHATSAPP_URL} className="rounded-full bg-[#25D366] px-4 py-2 text-sm font-semibold text-[#062b12] transition-transform hover:scale-105">
-            WhatsApp
-          </ExtLink>
-        </div>
-      </header>
+  <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-3">
+    <a href="#top" className="font-brand text-3xl leading-none text-[#C41E3A]">
+      Sera Cakes
+    </a>
+
+    <nav aria-label="Main" className="hidden items-center gap-7 text-sm text-[#4a3034] lg:flex">
+      {NAV.map(([label, href]) => (
+        <a key={href} href={href} className="transition-colors hover:text-[#C41E3A]">
+          {label}
+        </a>
+      ))}
+    </nav>
+
+    <div className="flex items-center gap-3">
+      <ExtLink href={WHATSAPP_URL} className="rounded-full bg-[#25D366] px-4 py-2 text-sm font-semibold text-[#062b12] transition-transform hover:scale-105">
+        WhatsApp
+      </ExtLink>
+
+      <button
+        type="button"
+        onClick={() => setMenuOpen((v) => !v)}
+        aria-label="Toggle menu"
+        aria-expanded={menuOpen}
+        className="flex h-10 w-10 items-center justify-center rounded-full border border-black/10 text-[#2b0a10] lg:hidden"
+      >
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-5 w-5" aria-hidden="true">
+          {menuOpen ? <path d="M6 6l12 12M18 6L6 18" /> : <path d="M4 7h16M4 12h16M4 17h16" />}
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  {menuOpen && (
+    <nav aria-label="Mobile" className="border-t border-black/10 bg-[#F2ECDF] px-6 py-4 lg:hidden">
+      <ul className="flex flex-col gap-4 text-sm text-[#4a3034]">
+        {NAV.map(([label, href]) => (
+          <li key={href}>
+            <a href={href} onClick={() => setMenuOpen(false)} className="block hover:text-[#C41E3A]">
+              {label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  )}
+</header>
 
       <main id="top">
         {/* 1. Hero */}
