@@ -347,9 +347,8 @@ export default function OrderPage() {
         <li><a href="/" onClick={() => setMenuOpen(false)} className="block hover:text-red-300">Home</a></li>
         <li><a href="/#about" onClick={() => setMenuOpen(false)} className="block hover:text-red-300">About</a></li>
         <li><a href="#menu" onClick={() => setMenuOpen(false)} className="block hover:text-red-300">Cakes</a></li>
-        <li><a href="/#custom" onClick={() => setMenuOpen(false)} className="block hover:text-red-300">Custom Cakes</a></li>
-        <li><a href="/#gallery" onClick={() => setMenuOpen(false)} className="block hover:text-red-300">Gallery</a></li>
-        <li><a href="/#contact" onClick={() => setMenuOpen(false)} className="block hover:text-red-300">Contact</a></li>
+        
+        
       </ul>
     </nav>
   )}
