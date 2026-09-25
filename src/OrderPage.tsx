@@ -303,7 +303,7 @@ export default function OrderPage() {
        <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 h-20">
           <a href="/" className="flex items-center gap-2 text-2xl tracking-tight text-[#f8ece9]">
             
-             <img src="/products/logo.png" alt="Sera Cakes" className="h-14 w-auto object-contain" />
+             <img src="/products/logo.png" alt="Sera Cakes" className="h-24 w-auto object-contain" />
                     </a>
 
           <nav className="hidden items-center gap-8 text-sm text-[#d9c3bd] lg:flex">
@@ -331,6 +331,53 @@ export default function OrderPage() {
         </div>
       </header>
 
+
+      {/* Promo Banner */}
+<section className="relative overflow-hidden bg-[#C41E3A]">
+  <div
+    className="pointer-events-none absolute inset-0 opacity-[0.08]"
+    style={{
+      backgroundImage: "radial-gradient(circle at 1px 1px, #ffffff 1px, transparent 0)",
+      backgroundSize: "26px 26px",
+    }}
+  />
+  <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-6 py-14 lg:grid-cols-2 lg:py-20">
+    <div className="text-center lg:text-left">
+      <span className="inline-flex items-center rounded-full border border-white/30 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-white">
+        Sera Cakes by Reeba
+      </span>
+      <h2 className="font-display mt-5 text-4xl font-bold uppercase leading-[1.05] text-white sm:text-5xl lg:text-6xl">
+        Cakes Made
+        <br />
+        With Love
+      </h2>
+      <p className="mt-5 max-w-md text-base leading-7 text-white/90 mx-auto lg:mx-0">
+        Freshly baked, handcrafted cakes for every celebration — order yours in one message.
+      </p>
+      
+       <a href={WHATSAPP_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-8 inline-flex items-center justify-center rounded-full bg-white px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-[#C41E3A] shadow-lg transition-transform hover:scale-105"
+      >
+        Order on WhatsApp
+      </a>
+    </div>
+    <div className="relative mx-auto h-[260px] w-full max-w-md sm:h-[320px] lg:h-[360px]">
+      <img
+        src="/products/ferrero.jpg"
+        alt="Ferrero Rocher cake"
+        className="absolute right-0 top-0 h-[70%] w-[65%] rotate-6 rounded-3xl border-4 border-white/20 object-cover shadow-2xl"
+      />
+      <img
+        src="/products/pistachio.jpg"
+        alt="Chocolate strawberry pistachio cake"
+        className="absolute bottom-0 left-0 h-[70%] w-[65%] -rotate-6 rounded-3xl border-4 border-white/20 object-cover shadow-2xl"
+      />
+    </div>
+  </div>
+</section>
+
       {/* Hero */}
       <section className="relative overflow-hidden border-b border-white/5">
         <div
@@ -344,9 +391,7 @@ export default function OrderPage() {
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-6 py-16 lg:grid-cols-2 lg:py-24">
           {/* Left content */}
           <div className="relative z-10">
-            <span className="inline-flex items-center rounded-full border border-red-400/30 bg-red-400/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-red-300">
-              Sera Cakes by Reeba
-            </span>
+            
 
             <h1 className="font-display mt-6 max-w-xl text-5xl font-semibold leading-[1.05] text-[#f9ece9] sm:text-6xl">
               Cakes Made for Moments Worth Celebrating
