@@ -214,21 +214,7 @@ function PhoneIcon() {
   );
 }
 
-function PinIcon() {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.6"
-      className="h-4 w-4"
-      aria-hidden="true"
-    >
-      <path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21z" />
-      <circle cx="12" cy="9.5" r="2.4" />
-    </svg>
-  );
-}
+
 
 const BADGE_STYLES: Record<NonNullable<Product["badge"]>, string> = {
   New: "bg-pink-500/15 text-pink-300 border-pink-500/30",
@@ -379,74 +365,7 @@ export default function OrderPage() {
   </div>
 </section>
 
-      {/* Hero */}
-      <section className="relative overflow-hidden border-b border-white/5">
-        <div
-          className="pointer-events-none absolute inset-0 opacity-[0.06]"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 1px 1px, #ffffff 1px, transparent 0)",
-            backgroundSize: "26px 26px",
-          }}
-        />
-        <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-6 py-16 lg:grid-cols-2 lg:py-24">
-          {/* Left content */}
-          <div className="relative z-10">
-            
-
-            <h1 className="font-display mt-6 max-w-xl text-5xl font-semibold leading-[1.05] text-[#f9ece9] sm:text-6xl">
-              Cakes Made for Moments Worth Celebrating
-            </h1>
-
-            <p className="mt-6 max-w-md text-base leading-7 text-[#d3bcb6]">
-              From classic cakes to custom creations, Sera Cakes by Reeba offers freshly baked, beautiful cakes for birthdays, anniversaries, weddings, and every special occasion.
-
-            </p>
-
-            <div className="mt-9 flex flex-wrap items-center gap-5">
-              <a
-                href="#menu"
-                className="rounded-full bg-[#C41E3A] px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-red-900/30 transition-colors hover:bg-[#a8172f]"
-              >
-                Shop Now
-              </a>
-
-              
-            </div>
-
-            <div className="mt-8 flex items-center gap-2 text-sm text-[#b39d97]">
-              <PinIcon />
-              Sera Cakes,         Sea view ward, cullen road, Alleppey 688001
-            </div>
-          </div>
-
-          {/* Right image + floating card */}
-          <div className="relative z-10">
-            <div className="relative overflow-hidden rounded-[28px] border border-white/5 shadow-[0_40px_90px_rgba(0,0,0,0.55)]">
-              <img
-                src="https://images.unsplash.com/photo-1621303837174-89787a7d4729?auto=format&fit=crop&w=1200&q=85"
-                alt="Elegant layered cake with gold leaf detail"
-                className="h-[420px] w-full object-cover sm:h-[480px]"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/5 to-transparent" />
-            </div>
-
-            <div className="absolute -bottom-8 left-6 flex items-center gap-4 rounded-2xl border border-white/10 bg-[#1e0910]/90 p-4 shadow-2xl backdrop-blur-md sm:left-10">
-              <img
-                src="/products/pistachio.jpg"
-                alt="Featured bake"
-                className="h-14 w-14 rounded-xl object-cover"
-              />
-              <div>
-                <p className="font-display text-sm text-[#f8ece9]">
-                  Chocolate Strawberry Pistachio
-                </p>
-                <p className="text-sm font-semibold text-red-300">₹1500</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+     
 
             {/* Some of our products */}
       <section className="mx-auto max-w-7xl px-6 py-20">
