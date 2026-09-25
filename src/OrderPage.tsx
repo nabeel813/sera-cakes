@@ -620,6 +620,61 @@ export default function OrderPage() {
           </button>
         </div>
       </section>
+      {/* 15. Footer */}
+<footer className="border-t border-white/10 bg-[#1e0910] px-6 py-14 text-[#d3bcb6]">
+  <div className="mx-auto grid max-w-7xl gap-10 text-sm sm:grid-cols-2 lg:grid-cols-4">
+    <div>
+      <p className="font-brand text-4xl leading-none text-[#C41E3A]">Sera Cakes</p>
+      <p className="mt-1 text-xs tracking-wide text-[#b39d97]">by Reeba</p>
+      <p className="mt-4 max-w-xs leading-6">
+        Fresh cakes and custom creations made for life's sweetest moments.
+      </p>
+    </div>
+
+    <div>
+      <h3 className="font-display text-base text-[#C41E3A]">Quick Links</h3>
+      <ul className="mt-3 space-y-2">
+        <li><a href="/" className="hover:text-red-300">Home</a></li>
+        <li><a href="/#about" className="hover:text-red-300">About</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 className="font-display text-base text-[#C41E3A]">Order</h3>
+      <ul className="mt-3 space-y-2">
+        <li>
+          <a href={MENU_URL} target="_blank" rel="noopener noreferrer" className="hover:text-red-300">
+            Digital Menu
+          </a>
+        </li>
+        <li>
+          <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="hover:text-red-300">
+            WhatsApp
+          </a>
+        </li>
+        <li><a href="tel:+919633559746" className="hover:text-red-300">Call Us</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 className="font-display text-base text-[#C41E3A]">Location</h3>
+      <p className="mt-3 leading-6">
+        Sera Cakes, Sea View Ward, Cullen Road, Alleppey (Alappuzha) 688001
+      </p>
+
+      {/* Add real URLs here to show these */}
+      <h3 className="mt-5 font-display text-base text-[#C41E3A]">Social</h3>
+      <ul className="mt-3 flex gap-4">
+        <li><a href="#" className="hover:text-red-300">Instagram</a></li>
+        <li><a href="#" className="hover:text-red-300">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <p className="mx-auto mt-12 max-w-7xl border-t border-white/10 pt-6 text-xs text-[#b39d97]">
+    Copyright © 2026 Sera Cakes by Reeba. All Rights Reserved.
+  </p>
+</footer>
 
       <FloatingVideo />
       <WhatsAppButton />
