@@ -309,13 +309,10 @@ export default function OrderPage() {
     </a>
 
     <nav className="hidden items-center gap-8 text-sm text-[#d9c3bd] lg:flex">
-      <a href="/" className="hover:text-red-300">Home</a>
-      <a href="/#about" className="hover:text-red-300">About</a>
-      <a href="#menu" className="hover:text-red-300">Cakes</a>
-      <a href="/#custom" className="hover:text-red-300">Custom Cakes</a>
-      <a href="/#gallery" className="hover:text-red-300">Gallery</a>
-      <a href="/#contact" className="hover:text-red-300">Contact</a>
-    </nav>
+  <a href="/" className="hover:text-red-300">Home</a>
+  <a href="#about" className="hover:text-red-300">About</a>
+  <a href="#menu" className="hover:text-red-300">Cakes</a>
+</nav>
 
     <div className="flex items-center gap-4">
       <span className="hidden items-center gap-2 text-sm text-[#d9c3bd] sm:flex">
@@ -345,7 +342,7 @@ export default function OrderPage() {
     <nav aria-label="Mobile" className="border-t border-white/5 bg-[#170408] px-6 py-4 lg:hidden">
       <ul className="flex flex-col gap-4 text-sm text-[#d9c3bd]">
         <li><a href="/" onClick={() => setMenuOpen(false)} className="block hover:text-red-300">Home</a></li>
-        <li><a href="/#about" onClick={() => setMenuOpen(false)} className="block hover:text-red-300">About</a></li>
+        <li><a href="#about" onClick={() => setMenuOpen(false)} className="block hover:text-red-300">About</a></li>
         <li><a href="#menu" onClick={() => setMenuOpen(false)} className="block hover:text-red-300">Cakes</a></li>
         
         
@@ -403,7 +400,8 @@ export default function OrderPage() {
      
 
             {/* Some of our products */}
-      <section className="mx-auto max-w-7xl px-6 py-20">
+      {/* About Us */}
+<section id="about" className="mx-auto max-w-7xl px-6 py-20">
         <div className="flex flex-col items-center text-center">
           <span className="text-xs font-semibold uppercase tracking-[0.3em] text-red-400/80">
             Fan favourites
@@ -589,7 +587,7 @@ export default function OrderPage() {
       <h3 className="font-display text-base text-[#C41E3A]">Quick Links</h3>
 <ul className="mt-3 space-y-2">
   <li><a href="/" className="hover:text-red-300">Home</a></li>
-  <li><a href="/#about" className="hover:text-red-300">About</a></li>
+  <li><a href="#about" className="hover:text-red-300">About</a></li>
   <li><a href="#menu" className="hover:text-red-300">Cakes</a></li>
   
 </ul>
