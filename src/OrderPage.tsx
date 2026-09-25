@@ -560,7 +560,7 @@ export default function OrderPage() {
 <footer className="border-t border-white/10 bg-[#1e0910] px-6 py-14 text-[#d3bcb6]">
   <div className="mx-auto grid max-w-7xl gap-10 text-sm sm:grid-cols-2 lg:grid-cols-4">
     <div>
-  <img src="/products/logo.png" alt="Sera Cakes by Reeba" className="h-20 w-auto object-contain" />
+  <img src="/products/logo-footer.png" alt="Sera Cakes by Reeba" className="h-24 w-auto object-contain" />
   <p className="mt-4 max-w-xs leading-6">
     Fresh cakes and custom creations made for life's sweetest moments.
   </p>
